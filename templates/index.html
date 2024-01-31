@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <center><h1>Welcome {{username}}</h1></center>
+    <hr>
+    <center><h1>Products : {{products}}</h1></center>
+    <hr>
+    <h2>Products List</h2>
+    {% for x in products %}
+    <ul>
+    <li>{{x}}</li>
+    </ul>
+    {% endfor %} 
+    <hr>
+    <center><h1>Movies : {{movies}}</h1></center>
+    <hr>
+    <center><table border="1px">
+        <h1>Movies</h1>
+        <tr>
+            <th>Sr.No</th>
+            <th>Movies Name</th>
+            <th>Ratings</th>
+        </tr>   
+        {% for k,v in movies.items %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{k}}</td>
+            <td>{{v}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+    <hr>
+    <center><h1>Fruits : {{fruitsdata}}</h1></center>
+
+</body>
+</html>
